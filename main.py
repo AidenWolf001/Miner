@@ -1,16 +1,34 @@
-# This is a sample Python script.
+import pygame
+import sys
+import math
+from pygame.locals import *
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+pygame.init()
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+
+points = [(200, 175), (300, 125), (400, 175), (450, 125), (450, 225), (400, 175), (300, 225)]
+
+size = width, height = 800, 800
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Miner")
+
+clock = pygame.time.Clock()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            sys.exit()
+
+    screen.fill(WHITE)
+
+    pygame.draw.rect(screen, BLACK, (0, 0, 30, 30), 0)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    pygame.display.flip()
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    clock.tick(10)
