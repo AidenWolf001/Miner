@@ -2,7 +2,7 @@ import random
 
 
 class Minefield:
-    def __init__(self, field_size = [30, 30], numer_of_mine = 200):
+    def __init__(self, field_size = [30, 30], numer_of_mine = 180):
         self.field_size = field_size
         self.number_of_mine = numer_of_mine
         self.field_list = [[0 for i in range(field_size[0])] for j in range(field_size[1])]
